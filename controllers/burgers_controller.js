@@ -1,10 +1,11 @@
+"use script";
 const express = require("express");
 const router = express.Router();
 
 const burger = require("../server.js");
 
 router.get("/", (req, res) => {
-  burger.all(function(data) {
+  burger.selectAll(function(data) {
     const burgerObj = {
       burger: data
     };
